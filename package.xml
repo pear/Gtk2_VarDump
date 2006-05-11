@@ -21,11 +21,11 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <active>yes</active>
  </lead>
 
- <date>2005-12-04</date>
+ <date>2006-05-11</date>
 
  <version>
-  <release>0.0.4</release>
-  <api>0.0.3</api>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
  </version>
 
  <stability>
@@ -35,16 +35,26 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
 
  <notes>
-  Make dialog modal, so that the debugged application can't continue.
+  * Modularized the program: It's easy to embed parts in your own application now
+  * All objects can be viewed now
+  * Object with classes that aren't available in PHP don't crash the app any more
  </notes>
+
  <contents>
   <dir name="/" baseinstalldir="Gtk2">
    <file name="VarDump.php" role="php"/>
+   <dir name="VarDump">
+    <file name="ColTreeView.php" role="php"/>
+    <file name="List.php"        role="php"/>
+    <file name="Pane.php"        role="php"/>
+    <file name="Tree.php"        role="php"/>
+   </dir>
    <dir name="docs">
     <dir name="examples">
-     <file name="Gtk2_VarDump_array.phpw" role="doc"/>
-     <file name="Gtk2_VarDump_object.phpw" role="doc"/>
-     <file name="Gtk2_VarDump_string.phpw" role="doc"/>
+     <file name="Gtk2_VarDump_array.phpw"     role="doc"/>
+     <file name="Gtk2_VarDump_gtkwindow.phpw" role="doc"/>
+     <file name="Gtk2_VarDump_object.phpw"    role="doc"/>
+     <file name="Gtk2_VarDump_string.phpw"    role="doc"/>
     </dir>
    </dir>
   </dir>
@@ -71,6 +81,24 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <changelog>
   <release>
    <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2006-05-11</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+  * Modularized the program: It's easy to embed parts in your own application now
+  * All objects can be viewed now
+  * Object with classes that aren't available in PHP don't crash the app any more
+   </notes>
+  </release>
+
+  <release>
+   <version>
     <release>0.0.4</release>
     <api>0.0.3</api>
    </version>
@@ -87,7 +115,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
 
   <release>
    <version>
-    <release>0.0.4</release>
+    <release>0.0.3</release>
     <api>0.0.3</api>
    </version>
    <stability>

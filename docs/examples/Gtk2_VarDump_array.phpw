@@ -4,7 +4,7 @@
 *
 *   @author Christian Weiske <cweiske@php.net>
 */
-require_once('Gtk2/VarDump.php');
+require_once 'Gtk2/VarDump.php';
 
 $ar = array(
     1,

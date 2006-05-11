@@ -1,0 +1,12 @@
+<?php
+/**
+*   Gtk2_VarDump example: Dump a GtkWindow
+*
+*   @author Christian Weiske <cweiske@php.net>
+*/
+require_once 'Gtk2/VarDump.php';
+
+$wnd = new GtkWindow();
+$wnd->show();
+new Gtk2_VarDump($wnd, 'GtkWindow example');
+?>
