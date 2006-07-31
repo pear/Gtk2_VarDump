@@ -18,5 +18,5 @@ $ar = array(
     array(array(array(array(array(array(array('hallo!')))))))
 );
 
-new Gtk2_VarDump($ar, 'ar');
+Gtk2_VarDump::display($ar, 'ar');
 ?>

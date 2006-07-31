@@ -19,14 +19,14 @@ require_once 'Gtk2/VarDump/Pane.php';
 *    if they have been expanded before, as loading them recursively
 *    is very dangerous (if there are loops).
 *
-*   Note that VarDump opens its own Gtk::main()-Loop, so your
-*    own program will stop executing until the VarDump window
+*   Note that Gtk2_VarDump::display() opens its own Gtk::main()-Loop,
+*    so your own program will stop executing until the VarDump window
 *    is closed.
 *
 *   Usage:
 *   require_once('Gtk2/VarDump.php');
 *   $ar = new array(1, 2, 3, 4, 'key' => array('this','is','cool');
-*   new Gtk2_VarDump($ar);
+*   Gtk2_VarDump::display($ar);
 *
 *   Layout:
 *   +--[Window title]------------------------------------------------+
@@ -71,9 +71,8 @@ class Gtk2_VarDump extends GtkWindow
 
 
     /**
-    *   Create a new Gtk2_VarDump window and keep it displayed
-    *   in its own Gtk::main()-loop.
-    *   This main loop is stopped as soon the window is closed
+    *   Create a new Gtk2_VarDump window.
+    *   When the window is closed, a main loop is stopped.
     *
     *   @param mixed    $variable   The variable to inspect
     *   @param string   $title      The title for the window and the variable
@@ -83,9 +82,24 @@ class Gtk2_VarDump extends GtkWindow
         parent::__construct();
         $this->buildDialog($title);
         $this->hpane->setVariable($variable, $title);
-        $this->show_all();
-        Gtk::main();
     }//public function __construct($variable, $title = 'Gtk2_VarDump')
+
+
+
+    /**
+    *   Create a new Gtk2_VarDump window and keep it displayed
+    *   in its own Gtk::main()-loop.
+    *   This main loop is stopped as soon the window is closed
+    *
+    *   @param mixed    $variable   The variable to inspect
+    *   @param string   $title      The title for the window and the variable
+    */
+    public static function display($variable, $title = 'Gtk2_VarDump')
+    {
+        $vd = new Gtk2_VarDump($variable, $title);
+        $vd->show_all();
+        Gtk::main();
+    }//public static function display($variable, $title = 'Gtk2_VarDump')
 
 
 

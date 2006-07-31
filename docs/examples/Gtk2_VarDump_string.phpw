@@ -6,5 +6,5 @@
 */
 require_once 'Gtk2/VarDump.php';
 
-new Gtk2_VarDump('Hello!', 'str');
+Gtk2_VarDump::display('Hello!', 'str');
 ?>

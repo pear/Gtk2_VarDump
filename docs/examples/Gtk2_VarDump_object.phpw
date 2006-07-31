@@ -18,5 +18,5 @@ $obj->child->age  = 23;
 
 $obj->array = array('Tell', 'me', 'something', 'new');
 
-new Gtk2_VarDump($obj, 'obj');
+Gtk2_VarDump::display($obj, 'obj');
 ?>

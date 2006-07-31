@@ -8,5 +8,5 @@ require_once 'Gtk2/VarDump.php';
 
 $wnd = new GtkWindow();
 $wnd->show();
-new Gtk2_VarDump($wnd, 'GtkWindow example');
+Gtk2_VarDump::display($wnd, 'GtkWindow example');
 ?>

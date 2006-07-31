@@ -21,11 +21,11 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <active>yes</active>
  </lead>
 
- <date>2006-05-11</date>
+ <date>2006-07-31</date>
 
  <version>
-  <release>0.1.0</release>
-  <api>0.1.0</api>
+  <release>0.2.0</release>
+  <api>0.2.0</api>
  </version>
 
  <stability>
@@ -35,9 +35,8 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
 
  <notes>
-  * Modularized the program: It's easy to embed parts in your own application now
-  * All objects can be viewed now
-  * Object with classes that aren't available in PHP don't crash the app any more
+  * BC BREAK: Use Gtk2_VarDump::display() now instead using the constructor,
+    since this doesn't show the window or start the main loop anymore.
  </notes>
 
  <contents>
@@ -79,6 +78,23 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <phprelease/>
 
  <changelog>
+  <release>
+   <version>
+    <release>0.2.0</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2006-07-31</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+  * BC BREAK: Use Gtk2_VarDump::display() now instead using the constructor,
+    since this doesn't show the window or start the main loop anymore.
+   </notes>
+  </release>
+
   <release>
    <version>
     <release>0.1.0</release>
