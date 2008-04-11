@@ -21,22 +21,21 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <active>yes</active>
  </lead>
 
- <date>2006-07-31</date>
+ <date>2008-04-11</date>
 
  <version>
-  <release>0.2.0</release>
-  <api>0.2.0</api>
+  <release>1.0.0</release>
+  <api>1.0.0</api>
  </version>
 
  <stability>
-  <release>beta</release>
-  <api>beta</api>
+  <release>stable</release>
+  <api>stable</api>
  </stability>
  <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
 
  <notes>
-  * BC BREAK: Use Gtk2_VarDump::display() now instead using the constructor,
-    since this doesn't show the window or start the main loop anymore.
+  Adjust to PHP-Gtk2 stable's version API changes
  </notes>
 
  <contents>
@@ -70,7 +69,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
    </pearinstaller>
    <extension>
     <name>php-gtk</name>
-    <min>2.0.0dev</min>
+    <min>2.0.1</min>
    </extension>
   </required>
  </dependencies>
@@ -78,6 +77,22 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <phprelease/>
 
  <changelog>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2008-04-11</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+    Adjust to PHP-Gtk2 stable's version API changes
+   </notes>
+  </release>
+
   <release>
    <version>
     <release>0.2.0</release>

@@ -22,7 +22,9 @@ class Gtk2_VarDump_List extends Gtk2_VarDump_ColTreeView
     protected function build()
     {
         //Keyname, Type (+ size), Value
-        $this->model = new GtkListStore(Gtk::TYPE_STRING, Gtk::TYPE_STRING, Gtk::TYPE_STRING);
+        $this->model = new GtkListStore(
+            Gobject::TYPE_STRING, Gobject::TYPE_STRING, Gobject::TYPE_STRING
+        );
 
         $this->set_model($this->model);
         $this->createColumns(array('Key', 'Type', 'Value'));
@@ -44,7 +46,7 @@ class Gtk2_VarDump_List extends Gtk2_VarDump_ColTreeView
 
 
     /**
-    *   Adds all the children of the given $variable to the list 
+    *   Adds all the children of the given $variable to the list
     *   on the right side.
     *   Arrays and objects are not added, as they appear on the
     *   tree on the left.

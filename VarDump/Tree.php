@@ -30,7 +30,10 @@ class Gtk2_VarDump_Tree extends Gtk2_VarDump_ColTreeView
     protected function build()
     {
         //Node, Type, original variable, if the children have been checked for subchildren
-        $this->model = new GtkTreeStore(Gtk::TYPE_STRING, Gtk::TYPE_STRING, Gtk::TYPE_PHP_VALUE, Gtk::TYPE_BOOLEAN);
+        $this->model = new GtkTreeStore(
+            Gobject::TYPE_STRING, Gobject::TYPE_STRING,
+            Gobject::TYPE_PHP_VALUE, Gobject::TYPE_BOOLEAN
+        );
         $this->set_model($this->model);
         $selection = $this->get_selection();
         $selection->connect ('changed'              , array($this, 'selectTreeRow'));
@@ -155,7 +158,7 @@ class Gtk2_VarDump_Tree extends Gtk2_VarDump_ColTreeView
     *   It is used to load the children of the node's children
     *   if they haven't been loaded yet.
     *
-    *   @param  GtkTreeView $tree       The tree on which the signal has been emitted 
+    *   @param  GtkTreeView $tree       The tree on which the signal has been emitted
     *   @param  GtkTreeIter $iterator   The node which has been expanded
     */
     public function expandTree($tree, $iterator)
@@ -208,7 +211,7 @@ class Gtk2_VarDump_Tree extends Gtk2_VarDump_ColTreeView
     *   The left mouse button will expand the node,
     *   the right mouse button will collapse it.
     *   Middle mouse button and a double-clicked left button will
-    *    expand all children but *only* if they have been expanded 
+    *    expand all children but *only* if they have been expanded
     *    before - it would be too dangerous to expand all children to
     *    any depth recursively if there are loops.
     *
