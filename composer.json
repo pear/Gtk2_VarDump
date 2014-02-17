@@ -1,0 +1,28 @@
+{
+    "authors": [
+        {
+            "email": "cweiske@php.net",
+            "name": "Christian Weiske",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    },
+    "description": "More info available on: http://pear.php.net/package/Gtk2_VarDump",
+    "license": "LGPL",
+    "name": "pear/gtk2_vardump",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Gtk2_VarDump",
+        "source": "https://github.com/pear/Gtk2_VarDump"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
